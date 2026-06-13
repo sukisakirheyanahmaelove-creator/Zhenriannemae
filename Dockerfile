@@ -5,12 +5,12 @@ RUN apk add --no-cache \
     unzip \
     ca-certificates
 
-# Bersyon nga sigurado nga naa
+#
 ARG XRAY_VERSION=1.8.23
 
 WORKDIR /tmp
 
-# Sigurado nga link
+# 
 RUN curl -fL "https://github.com/XTLS/Xray-core/releases/download/v${XRAY_VERSION}/Xray-linux-64.zip" -o xray.zip && \
     unzip xray.zip && \
     chmod +x xray && \
